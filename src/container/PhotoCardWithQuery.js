@@ -4,8 +4,8 @@ import { useSinglePhoto } from "../hooks/useSinglePhoto";
 
 const PhotoCardWithQuery = ({ id }) => {
   const { loading, data } = useSinglePhoto(id);
-  if (loading) return "Cargando...";
-  return <PhotoCard {...data.photo} />;
+  if (loading) return <p>"Cargando..."</p>;
+  return <PhotoCard {...data} />;
 };
 
 export { PhotoCardWithQuery };

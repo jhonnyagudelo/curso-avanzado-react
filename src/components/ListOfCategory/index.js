@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Category } from "../Category";
 import { List, Item } from "./styled";
-
 const URL_API = "https://petgram-server-jhonnyagudelo.vercel.app";
 
 function useCategoryData() {
@@ -47,7 +46,7 @@ const ListOfCategories = () => {
       ) : (
         categories.map((category) => (
           <Item key={category.id}>
-            <Category {...category} />
+            <Category {...category} path={`/pet/${category.id}`} />
           </Item>
         ))
       )}
